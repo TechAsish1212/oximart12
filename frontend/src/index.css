@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+
+.logo {
+    color: #800080;
+}

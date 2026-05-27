@@ -4,7 +4,7 @@ const customeTheme = createTheme({
   palette: {
     mode: "light", // This sets the theme to dark mode
     primary: {
-      main: "#00927c",
+      main: "#800080",
 
     },
     secondary: {
