@@ -6,12 +6,19 @@ import ProductsCard from './ProductsCard';
 const product =
 {
   images: [
-    "https://images.squarespace-cdn.com/content/v1/62957e003c63212b17de5749/cb3406ee-bb0d-418c-9ba1-4f182180ef2a/Sennheiser-Product-Gel0018.jpg",
     "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtMzYyLTAxYS1tb2NrdXAuanBn.jpg",
+    "https://images.squarespace-cdn.com/content/v1/62957e003c63212b17de5749/cb3406ee-bb0d-418c-9ba1-4f182180ef2a/Sennheiser-Product-Gel0018.jpg",
     "https://www.dropicts.com/wp-content/uploads/Dropicts-Feautred-Images-Beauty-Product-02.jpg",
     "https://i.pinimg.com/236x/89/e2/83/89e283ed8495bac5c5dae62084d78a43.jpg"
 
-  ]
+  ],
+  seller:{
+    bussinessDetails:{
+      bussinessName:"Skin Care LTD.",
+      originalPrice:999,
+      discountPrice:699,
+    }
+  }
 }
 
 const Products = () => {
@@ -29,7 +36,7 @@ const Products = () => {
       </div>
 
       <div className='lg:flex'>
-        <section className='border-r hidden lg:block w-[20%] min-h-screen border-gray-300'>
+        <section className='hidden lg:block w-[20%] min-h-screen border-gray-300'>
           <FilterSection />
         </section>
         <section className='w-full lg:w-[80%] space-y-5'>
@@ -54,7 +61,7 @@ const Products = () => {
 
           <Divider />
 
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 px-5 justify-center'>
+          <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 px-5 justify-center mt-5'>
             {[1, 1, 1, 1, 1].map((item, index) =>
               <div key={index * 3}>
                 <ProductsCard item={product} />
